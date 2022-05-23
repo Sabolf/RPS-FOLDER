@@ -1,3 +1,7 @@
+// First Robot is a function (RPS)
+//Using variable that randomly generates a number between 0 and 1
+//Then decides between three choices (Rock Paper or Scisssors) depending on which number is chosen
+
 let RPS = function(){
     let functionResult = Math.random()
         if (functionResult < .33){
@@ -10,7 +14,10 @@ let RPS = function(){
             return "scissors"
         }
     }
-     let theTie = 0       
+        
+// Second Robot is a function (RPS)
+//Using variable that randomly generates a number between 0 and 1
+//Then decides between three choices (Rock Paper or Scisssors) depending on which number is chosen
 
     let RPS2 = function(){
     let functionResult = Math.random()
@@ -25,8 +32,15 @@ let RPS = function(){
         }
     
     }
+    
+    // Keeps Track of how many times Each robot wins and if they tie
 let theFirst = 0 
-let theSecond = 0   
+let theSecond = 0 
+ let theTie = 0   
+ 
+ //Function that takes in the Two Robot functions (RPS and RPS2) 
+ //Compares their answers and decides who wins and if they tied
+ // returns the result, says the answers of each robot, then tells the scores of each and the amount of ties
 let theChecker = function(first, second){
     if(first == second){
         theTie++
@@ -42,6 +56,8 @@ let theChecker = function(first, second){
     
 }
 }
+
+// for loop that runs the function for 100 times
 
  for(i = 0; i < 100; i++){
    console.log(theChecker(RPS(),RPS2()))
